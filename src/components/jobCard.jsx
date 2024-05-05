@@ -4,7 +4,7 @@ import "../styles/landing.css";
 function JobCards({ data }) {
   const AboutCompany = data.jobDetailsFromCompany;
   return (
-    <div className="card_container" id={data.jdUid}>
+    <div className="card_container" key={data.jdUid}>
       <div className="card_header">
         <img src={data.logoUrl} className="company_logo" alt="logo" />
         <div>
