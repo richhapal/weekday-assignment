@@ -1,0 +1,103 @@
+.landing_page {
+  padding: 10px;
+}
+
+.filter_header {
+  background-color: #191536b4;
+}
+
+.jobs_cards_landing_page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 50px 0px;
+}
+
+.card_container {
+  max-width: 320px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px !important;
+
+  .card_header {
+    display: flex;
+    gap: 20px;
+
+    .company_logo {
+      width: 30px;
+      height: 30px;
+    }
+
+    .info_container {
+      h3 {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 3px;
+        margin-top: 0px;
+        color: #8b8b8b;
+      }
+      h2 {
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.87);
+        text-transform: capitalize;
+        margin-bottom: 3px;
+      }
+    }
+    .location {
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 5px;
+      color: rgba(0, 0, 0, 0.87);
+      text-transform: capitalize;
+    }
+  }
+  .salary_estimate {
+    font-size: 14px !important;
+    font-weight: 500;
+    margin: 8px 0 !important;
+  }
+
+  .about_company {
+    h3 {
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0px;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+
+  .experience {
+    h3 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+      color: #8b8b8b;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .apply_button {
+    width: 100%;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 8px 0px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 5px 0;
+  }
+}
