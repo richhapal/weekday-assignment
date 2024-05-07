@@ -1,11 +1,16 @@
 import React from "react";
 import "../styles/landing.css";
-import { useSelector } from "react-redux";
+import GenericDropdown from "./genericDropdown";
+import filterDropDownItems from "./util";
 
 function FilterHeader() {
-  const { jobsList } = useSelector((state) => state.jobSearch);
-
-  return <div className="filter_header">Job filter header</div>;
+  return (
+    <div className="filter_header">
+      {filterDropDownItems.map((data) => (
+        <GenericDropdown data={data} />
+      ))}
+    </div>
+  );
 }
 
 export default FilterHeader;

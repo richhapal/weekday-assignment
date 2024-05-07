@@ -3,7 +3,48 @@
 }
 
 .filter_header {
-  background-color: #191536b4;
+  /* background-color: #191536b4; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.genric_dropdown {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  .placeholder {
+    opacity: 0.5;
+  }
+  .dropdown_options {
+    background-color: #8b8b8b;
+    width: 150px;
+    height: 100px;
+    border-radius: 2px;
+    position: absolute;
+    top: 40px;
+    z-index: 100;
+    overflow: auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    .option_value {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      &:not(:last-child) {
+        border-bottom: 1px solid #383232;
+      }
+      padding: 5px;
+    }
+  }
 }
 
 .jobs_cards_landing_page {
@@ -12,6 +53,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   margin: 50px 0px;
+  padding: 10px 0px;
 
   /* tablet screen */
   @media only screen and (max-width: 768px) {

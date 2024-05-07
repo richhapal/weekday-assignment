@@ -2,7 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   jobsList: [],
-  jobFilters: {},
+  jobFilters: {
+    minExp: null,
+    jobRole: null,
+    minJdSalary: null,
+  },
 };
 
 const jobSearchSlice = createSlice({
@@ -12,8 +16,11 @@ const jobSearchSlice = createSlice({
     updateJobList(state, action) {
       state.jobsList = action.payload.value;
     },
+    updateJobFilters(state, action) {
+      state.jobFilters = action.payload.value;
+    },
   },
 });
 
-export const { updateJobList } = jobSearchSlice.actions;
+export const { updateJobList, updateJobFilters } = jobSearchSlice.actions;
 export default jobSearchSlice.reducer;
